@@ -1,0 +1,4 @@
+com\eca\busdepot\labourservice\model\Labour.class
+com\eca\busdepot\labourservice\LabourServiceApplication.class
+com\eca\busdepot\labourservice\controller\LabourController.class
+com\eca\busdepot\labourservice\repository\LabourRepository.class

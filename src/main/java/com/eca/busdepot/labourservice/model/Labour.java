@@ -1,15 +1,9 @@
 package com.eca.busdepot.labourservice.model;
 
 import jakarta.persistence.*;
-import lombok.*;
 
 @Entity
 @Table(name = "labours")
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder
 public class Labour {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,4 +13,25 @@ public class Labour {
     private String role; // Driver, Conductor, Mechanic
     private String contact;
     private String email;
+
+    public Labour() {}
+
+    public Labour(Long id, String name, String role, String contact, String email) {
+        this.id = id;
+        this.name = name;
+        this.role = role;
+        this.contact = contact;
+        this.email = email;
+    }
+
+    public Long getId() { return id; }
+    public void setId(Long id) { this.id = id; }
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
+    public String getRole() { return role; }
+    public void setRole(String role) { this.role = role; }
+    public String getContact() { return contact; }
+    public void setContact(String contact) { this.contact = contact; }
+    public String getEmail() { return email; }
+    public void setEmail(String email) { this.email = email; }
 }
